@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :message do
     text "MyString"
-    user nil
+    user
   end
 end
