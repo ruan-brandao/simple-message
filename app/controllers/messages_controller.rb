@@ -19,7 +19,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to @message
     else
-      render :new
+      redirect_to new_message_path, alert: "The message could not be created"
     end
   end
 
