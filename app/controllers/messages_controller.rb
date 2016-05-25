@@ -26,8 +26,12 @@ class MessagesController < ApplicationController
   end
 
   def destroy
-    @message.destroy
-    redirect_to messages_path
+    if @message.user == current_user
+      @message.destroy
+      redirect_to messages_path
+    else
+      redirect_to "/", alert: "Permission Denied"
+    end
   end
 
   private
