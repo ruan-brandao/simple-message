@@ -1,5 +1,4 @@
 class MessagesController < ApplicationController
-  #TODO implement authorization
   before_action :authenticate_user!, only: [:new, :create, :destroy]
   before_action :set_message, only: [:show, :destroy]
 
