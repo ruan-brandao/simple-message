@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'web-console', '~> 2.0', group: :development
 gem 'devise', '~> 3.5', '>= 3.5.2'
+gem 'foundation-rails', '~> 6.2', '>= 6.2.3.0'
 
 group :development, :test do
   gem 'byebug'
