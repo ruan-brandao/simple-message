@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "Create message" do
-  scenario "with success" do
+  scenario "creates a new message" do
     user = FactoryGirl.create(:user)
     message_text = "Test message with awesome text"
 
@@ -14,7 +14,7 @@ feature "Create message" do
     expect(page).to have_content(message_text)
   end
 
-  scenario "without a text" do
+  scenario "does not create a message without a text" do
     user = FactoryGirl.create(:user)
 
     sign_in(user)
